@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ICU Report{% endblock %}
+
+{% block body %}
+    <h1>Edit ICU Report</h1>
+
+    {{ include('icu/icureport_form.html.twig', {'button_label': 'Update'}) }}
+
+    {{ include('icu/icureport_delete_form.html.twig' , {'button_label': 'Delete'}) }}
+
+    <a href="{{ path('icu_reports_list') }}">back to list</a>
+
+{% endblock %}

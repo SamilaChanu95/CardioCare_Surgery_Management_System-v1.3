@@ -1,0 +1,104 @@
+App\Entity\Patient: 
+            properties:
+                pNIC:
+                    - App\Validator\Constraints\ContainsAlphanumeric: ~
+                    - NotBlank: ~
+                    - Length:
+                        min: 10
+                        max: 12
+                        minMessage: 'Your NIC Number must be at least {{ limit }} characters long'
+                        maxMessage: 'Your NIC Number cannot be longer than {{ limit }} characters'
+                pPhoneNumber:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                pEmergencyContactDetails:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                pFirstName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+                pLastName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+
+App\Entity\Consultant: 
+            properties:
+                cNIC:
+                    - App\Validator\Constraints\ContainsAlphanumeric: ~
+                    - NotBlank: ~
+                    - Length:
+                        min: 10
+                        max: 12
+                        minMessage: 'Your NIC Number must be at least {{ limit }} characters long'
+                        maxMessage: 'Your NIC Number cannot be longer than {{ limit }} characters'
+                cPhoneNumber:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                cFirstName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+                cLastName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~    
+                        
+
+App\Entity\Nurse: 
+            properties:
+                nNIC:
+                    - App\Validator\Constraints\ContainsAlphanumeric: ~
+                    - NotBlank: ~
+                    - Length:
+                        min: 10
+                        max: 12
+                        minMessage: 'Your NIC Number must be at least {{ limit }} characters long'
+                        maxMessage: 'Your NIC Number cannot be longer than {{ limit }} characters'
+                nPhoneNumber:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                nFirstName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+                nLastName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+
+App\Entity\Doctor: 
+            properties:
+                dNIC:
+                    - App\Validator\Constraints\ContainsAlphanumeric: ~
+                    - NotBlank: ~
+                    - Length:
+                        min: 10
+                        max: 12
+                        minMessage: 'Your NIC Number must be at least {{ limit }} characters long'
+                        maxMessage: 'Your NIC Number cannot be longer than {{ limit }} characters'
+                dPhoneNumber:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                dFirstName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+                dLastName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~    
+
+
+App\Entity\Technician: 
+            properties:
+                tNIC:
+                    - App\Validator\Constraints\ContainsAlphanumeric: ~
+                    - NotBlank: ~
+                    - Length:
+                        min: 10
+                        max: 12
+                        minMessage: 'Your NIC Number must be at least {{ limit }} characters long'
+                        maxMessage: 'Your NIC Number cannot be longer than {{ limit }} characters'
+                tPhoneNumber:
+                    - App\Validator\Constraints\ContainsNumberic: ~
+                    - NotBlank: ~
+                tFirstName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~
+                tLastName:
+                    - App\Validator\Constraints\ContainsAlphabetic: ~
+                    - NotBlank: ~    

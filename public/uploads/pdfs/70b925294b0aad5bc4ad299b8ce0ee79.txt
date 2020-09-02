@@ -1,0 +1,23 @@
+IOT BASED GREENHOUSE MGT SYSTEM (3
+
+RD YEAR GROUP PROJECT)
+A Android Application which allows to Control and Maintain most productive
+condition of Crops in Greenhouse. Side features-Post system with adding
+comments, Weather, Many more features related Greenhouse Mgt.
+Developed with (Android Studio, Firebase, PHP, HTML, MySQL, BOOTSTRAP,
+CSS, JavaScript, laravel).
+
+
+This is my 2nd-year group project which is a ‘Point of Sale' web
+app to automate the billing process of the Senior Common Room.
+We developed this as per requirement of the head of the Senior
+Common Room, University of Jaffna.
+● Technologies
+○ PHP
+○ JavaScript
+○ Bootstrap , Html, CSS
+○ MySql
+● Software development methodology
+○ Waterfall model
+
+

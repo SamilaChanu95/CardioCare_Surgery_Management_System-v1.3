@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Password Change{% endblock %}
+
+{% block body %}
+
+    <!-- Page Specifying Meta Data -->
+    {% include "meta_data.html.twig" %}
+
+    <!-- CSS Links -->
+    {% include "css.html.twig" %} 
+
+    <body class="hold-transition register-page">
+        <div class="register-box">
+            <div class="register-logo">
+                <a href="#"><b>Cardio</b>Care</a>
+            </div>
+
+            <!-- /.login-logo -->
+            {% include "forget/_form.html.twig" %}
+
+        </div>
+        <!-- /.login-box -->
+   </body>
+
+    <!-- Javascript Links -->
+    {% include "js.html.twig" %}
+
+{% endblock %}

@@ -1,0 +1,187 @@
+Histogram for a image
+=====================
+
+function h=histogram(I)
+
+if (length(size(I))==3)
+I=rgb2gray(I);
+end
+
+[row,col]=size(I);
+h=zeros(1,256);
+
+for i=1:row
+    for j=1:col
+        a=I(i,j);
+        h(a+1)=h(a+1)+1;
+    end
+end
+
+bar(h);
+plot(h);
+title('Histogram of Lena');
+
+histogram of image
+=================
+
+function h=histogram(I)
+
+if (length(size(I))==3)
+I=rgb2gray(I);
+end
+
+[row,col]=size(I);
+h=zeros(1,256);
+
+for i=1:row
+    for j=1:col
+        a=I(i,j);
+        h(a+1)=h(a+1)+1;
+    end
+end
+
+bar(h);
+plot(h);
+title('Histogram of Lena');
+
+ chisttogram of image
+=====================
+
+function H=chistogram(h)
+
+l=length(h);
+H=zeros(1,l);
+
+H(1)=h(1);
+
+for i=2:l
+    H(i)=h(i)+H(i-1);
+end
+
+
+changing the brightness of an image
+===================================
+
+function I=brightness(I,c)
+    if length(size(I))==3
+        I=rgb2gray(I);
+    end
+ [M,N]=size(I);
+ 
+ for i=1:M
+     for j=1:N
+         a=I(i,j);
+         a=a+c;
+         
+        if(a>255)
+            a=255;
+        elseif(a<0)
+                a=0;
+        end
+        I(i,j)=a;
+       
+        
+     end
+ end
+
+change the contrast of an image
+===============================
+
+function I=contrast(I,s)
+    if length(size(I))==3
+        I=rgb2gray(I);
+    end
+ [M,N]=size(I);
+ 
+ for i=1:M
+     for j=1:N
+         a=I(i,j);
+         a=a*s;
+         
+        if(a>255)
+            a=255;
+        elseif(a<0)
+                a=0;
+        end
+        I(i,j)=a;
+       
+        
+     end
+ end
+
+invert the image
+===================
+
+function I=invert(I)
+    if length(size(I))==3
+        I=rgb2gray(I);
+    end
+ [M,N]=size(I);
+ 
+ for i=1:M
+     for j=1:N
+         I(i,j)=255-I(i,j);
+     end     
+ end 
+
+threshholding of an image
+========================
+
+function I=thresholding(I,c)
+    if length(size(I))==3
+        I=rgb2gray(I);
+    end
+ [M,N]=size(I);
+ 
+ for i=1:M
+     for j=1:N
+         
+         
+        if(I(i,j)>c)
+            I(i,j)=255;
+        else
+            I(i,j)=0;
+        end
+        
+       
+        
+     end
+ end 
+
+edges in image
+==============
+
+I =imread('./Images/graylena.jpg');
+
+if (length(size(I))==3)
+    I=rgb2gray(I);
+end
+
+E=edge(I,'canny');
+imshow(E);
+
+%H=fspecial(kernal) to create filter mask
+%instead of canny you can use sobel or prewitt
+%imfilter(I,H)
+
+alphablend of an image
+=======================
+
+function K=alphablend(I,J,s)
+    if length(size(I))==3
+        I=rgb2gray(I);
+    end
+    
+    if length(size(J))==3
+        J=rgb2gray(J);
+    end
+ [M,N]=size(I);
+  K=I;
+ 
+ for i=1:M
+     for j=1:N
+         
+         K(i,j)=s*I(i,j)+(1-s)*J(i,j);
+         
+     end
+ end
